@@ -1,0 +1,20 @@
+{
+  "name": "gulp-x-deploy",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "xingyan",
+  "license": "ISC",
+  "dependencies": {
+    "g-debug": "0.0.0",
+    "g-file": "0.0.2",
+    "g-upload-image": "0.0.10",
+    "gulp-util": "^3.0.6",
+    "lodash": "^3.10.0",
+    "q": "^1.4.1",
+    "through2": "^2.0.0"
+  }
+}
