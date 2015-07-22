@@ -55,6 +55,7 @@ module.exports = function index(opts) {
         //替换
         result.forEach(function(item) {
           if(item != null) {
+            //先替换script标签中的路径字符串，再将整个script标签字符串统一替换，防止替错
             newHtml = newHtml.replace(item.str, (item.str.replace(item.rel, item.cdn)));
           }
         });
