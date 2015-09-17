@@ -34,15 +34,16 @@ module.exports = function index(opts) {
     })
     .then(function(output) {
         return q.all(_.flattenDeep([output['js'].map(function(js) {
-          return upload(file, js);
+          return upload(file, js, opts);
         }), output['css'].map(function(css) {
-          return upload(file, css);
+          return upload(file, css, opts);
         })]));
       })
     .then(function(result) {
         result.forEach(function(item) {
           if(item != null) {
-            newHtml = newHtml.replace(item.str, (item.str.replace(item.rel, item.cdn)));
+            var cdn = opts && opts.host && typeof opts.host == "string"? item.cdn.replace(/http:\/\/.*\//, 'http://' + opts.host + '/'): item.cdn;
+            newHtml = newHtml.replace(item.str, (item.str.replace(item.rel, cdn)));
           }
         });
         try {
