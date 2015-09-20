@@ -1,6 +1,6 @@
 {
   "name": "gulp-x-deploy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "deploy static resource",
   "main": "index.js",
   "scripts": {
@@ -26,6 +26,7 @@
     "gulp-util": "^3.0.6",
     "lodash": "^3.10.0",
     "q": "^1.4.1",
-    "through2": "^2.0.0"
+    "through2": "^2.0.0",
+    "wurl": "^2.0.1"
   }
 }
