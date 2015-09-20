@@ -1,6 +1,6 @@
 {
   "name": "gulp-x-deploy",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "deploy static resource",
   "main": "index.js",
   "scripts": {

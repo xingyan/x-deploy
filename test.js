@@ -5,6 +5,10 @@ var gulp = require('gulp');
 
 gulp.src('./test/1.html')
   .pipe(deploy({
-    host: 'baidu.com'
+    host: {
+      max: 8,
+      name: 'baidu.com',
+      prefix: 'i'
+    }
   }))
   .pipe(gulp.dest('./test/dist'));
