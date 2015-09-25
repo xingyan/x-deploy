@@ -46,9 +46,9 @@ module.exports = function index(opts) {
     .then(function(output) {
         //遍历路径发送上线
         return q.all(_.flattenDeep([output['js'].map(function(js) {
-          return upload(file, js);
+          return upload(file, js, opts);
         }), output['css'].map(function(css) {
-          return upload(file, css);
+          return upload(file, css, opts);
         })]));
       })
     .then(function(result) {
